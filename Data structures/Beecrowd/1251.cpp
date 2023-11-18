@@ -26,7 +26,7 @@ void solve(string str) {
 int main() { no_tle_pls
     string str;
     int f = 1;
-    while (getline(cin, str)) {
+    while (cin >> str) {
         if (not f) cout << '\n';
         f = 0;
         solve(str);
