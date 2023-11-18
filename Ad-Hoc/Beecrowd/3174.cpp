@@ -13,7 +13,7 @@ const ll LINF = 0x3f3f3f3f3f3f3f3fl;
 const int MAX = 1e9 + 7;
 
 map <char, int> hrs {{'b', 8}, {'a', 4}, {'m', 6}, {'d', 12}};
-map <char, int> rest {{'b', 0}, {'a', 0}, {'m', 0}, {'d', 0}};
+map <char, int> rest;
 
 void solve() {
     int t, ans {}; cin >> t;
