@@ -38,7 +38,7 @@ void solve(int n) {
 
 int main() { no_tle_pls
     int n;
-    while (cin >> n, n) {
+    while (cin >> n) {
         solve(n);
         cout << '\n';
     }
