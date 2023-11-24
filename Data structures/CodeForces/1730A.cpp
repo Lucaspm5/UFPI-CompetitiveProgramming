@@ -23,7 +23,7 @@ void solve() {
             ++memo[x];
         }
         for (const auto[i, j] : memo) {
-            ans += min(1 * j, c);
+            ans += min(j, c);
         }
         cout << ans << '\n';
     }
