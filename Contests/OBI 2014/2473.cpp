@@ -2,7 +2,7 @@
 using namespace std;
  
 #define no_tle_pls ios_base::sync_with_stdio(false); cin.tie(NULL);
-//#define all(x) (x).begin(), (x).end()
+#define all(x) (x).begin(), (x).end()
 #define pb push_back
 #define f first
 #define s second
