@@ -10,7 +10,7 @@ using namespace std;
 using ll = long long;
 const int INF = 0x3f3f3f3f;
 const ll LINF = 0x3f3f3f3f3f3f3f3fl;
-const int MAX = 2 << 17
+const int MAX = 2 << 17;
 
 int main() { no_tle_pls
     int n; cin >> n;
