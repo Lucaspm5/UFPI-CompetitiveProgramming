@@ -16,7 +16,7 @@ const int MAX = 2 << 17;
 
 int main() {
     int n, x; cin >> n >> x;
-    double ans =  (double)x / (n + 2);
+    double ans = (double)x / (n + 2);
     printf("%.2lf\n", ans);
     return 0;
 }
