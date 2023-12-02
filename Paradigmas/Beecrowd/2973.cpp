@@ -13,7 +13,7 @@ using pii = pair<int, int>;
 
 size_t N, C, T;
 
-inline bool f(int x, const vector<int>& p) {
+inline bool f(ll x, const vector<int>& p) {
     ll pipocas = T * x;
     size_t c = 1, i {};
     while (i < N) {
