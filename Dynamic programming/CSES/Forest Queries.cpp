@@ -27,7 +27,7 @@ int main() { no_tle_pls
     }
     while(Q--) {
         st y1, x1, y2, x2; cin >> y1 >> x1 >> y2 >> x2;
-        cout << dp[y2][x2] - dp[y2][x1-1] - dp[y1-1][x2] + dp[y1-1][x1-1]<< '\n';
+        cout << dp[y2][x2] - dp[y2][x1-1] - dp[y1-1][x2] + dp[y1-1][x1-1] << '\n';
     }
     return 0;
 }
