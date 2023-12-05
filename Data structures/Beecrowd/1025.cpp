@@ -23,7 +23,7 @@ int main() {
         cout << "CASE# " << cont << ":" << '\n';
         while (q--) {
             auto it = lower_bound(all(v), Q[i]);
-            if (it == v.end() || *it != Q[i]) {
+            if (it == v.end() or *it != Q[i]) {
                 cout << Q[i] << " not found" << '\n';
             } else {
                 cout << Q[i] << " found at " << ((it - v.begin()) + 1) << '\n';
