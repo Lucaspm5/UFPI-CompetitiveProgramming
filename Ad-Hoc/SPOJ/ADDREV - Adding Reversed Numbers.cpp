@@ -11,7 +11,6 @@ using vi = vector<int>;
 using pii = pair<int, int>;
 
 inline int invert(string n) {
-    int r = n.size() - 1;
     while (!n.empty() and n.back() == '0') n.pop_back();
     reverse(all(n));
     return stoi(n);
