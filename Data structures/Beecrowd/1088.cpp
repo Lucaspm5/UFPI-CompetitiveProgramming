@@ -14,12 +14,12 @@ using pii = pair<int, int>;
 
 vi aux;
 
-inline int mergeSort(vi& v, int l, int r) {
+inline int solve(vi& v, int l, int r) {
     int ans = 0;
     if (l < r) {
         int mid = (r + l) >> 1;
-        ans += mergeSort(v, l, mid);
-        ans += mergeSort(v, mid + 1, r);
+        ans += solve(v, l, mid);
+        ans += solve(v, mid + 1, r);
 
         int i = l, j = mid + 1, k = l;
         while ((i <= mid) and (j <= r)) {
@@ -43,7 +43,7 @@ int main() {
         vi v(n);
         aux.resize(n);
         for (int &x : v) cin >> x;
-        int ans = mergeSort(v, 0, n - 1);
+        int ans = solve(v, 0, n - 1);
         cout << (~ans & 1 ? "Carlos" : "Marcelo") << '\n';
     }
     return 0;
