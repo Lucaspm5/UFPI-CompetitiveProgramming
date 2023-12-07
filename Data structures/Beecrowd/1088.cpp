@@ -14,28 +14,25 @@ using pii = pair<int, int>;
 
 vi aux;
 
-inline int mergeSort(const vi& v, int l, int r) {
+inline int mergeSort(vi& v, int l, int r) {
     int ans = 0;
     if (l < r) {
         int mid = (r + l) >> 1;
         ans += mergeSort(v, l, mid);
         ans += mergeSort(v, mid + 1, r);
 
-        for (int i = l; i <= r;++i) aux[i] = v[i];
-
         int i = l, j = mid + 1, k = l;
         while ((i <= mid) and (j <= r)) {
             aux[k++] = min(v[i], v[j]);
-            if (aux[k - 1] == v[i]) {
-                ++i;
-                ans += (j - mid);
-            } else ++j;
+            if (aux[k-1] == v[j]) {
+                ++j;
+                ans += (mid - i + 1);
+            } else ++i;
         }
-        while (i <= mid) {
-            aux[k++] = v[i++];
-            ans += (i - mid); 
-        }
+        while (i <= mid) aux[k++] = v[i++];
         while (j <= r) aux[k++] = v[j++];
+
+        for (i = l; i <= r;++i) v[i] = aux[i];
     }
     return ans;
 }
@@ -47,7 +44,7 @@ int main() {
         aux.resize(n);
         for (int &x : v) cin >> x;
         int ans = mergeSort(v, 0, n - 1);
-        cout << (~ans & 1 ? "Marcelo" : "Carlos") << '\n';
+        cout << (~ans & 1 ? "Carlos" : "Marcelo") << '\n';
     }
     return 0;
 }
