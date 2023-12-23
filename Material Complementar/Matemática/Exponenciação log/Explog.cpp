@@ -22,6 +22,7 @@ inline ll exp(ll a, ll e) {
 }
 
 int main() { _
-    cout << exp(2, 14) << '\n';
+    // Example
+    //cout << exp(2, 14) << '\n';
     return 0;
 }
