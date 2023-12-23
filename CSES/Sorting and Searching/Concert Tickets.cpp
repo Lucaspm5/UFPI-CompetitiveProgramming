@@ -36,3 +36,4 @@ int main() { _
         cout << _solve(p, x) << '\n';
     }
     return 0;
+  }
