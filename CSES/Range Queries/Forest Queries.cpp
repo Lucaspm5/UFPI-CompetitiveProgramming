@@ -30,3 +30,4 @@ int main() { no_tle_pls
         cout << dp[y2][x2] - dp[y2][x1-1] - dp[y1-1][x2] + dp[y1-1][x1-1]<< '\n';
     }
     return 0;
+}
