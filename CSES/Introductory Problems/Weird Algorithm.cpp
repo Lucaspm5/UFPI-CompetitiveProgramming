@@ -34,4 +34,5 @@ int main() {
     }
     cout << (cpy == 1 ? "1" : " 1") << q;
     return 0;
+}
 
