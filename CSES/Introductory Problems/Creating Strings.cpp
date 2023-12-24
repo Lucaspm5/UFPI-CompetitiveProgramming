@@ -23,5 +23,5 @@ int main() {
     cout << b.size() << '\n';
     for (const auto &it : b)
         cout << it << '\n';
-    
+    return 0;
 }
