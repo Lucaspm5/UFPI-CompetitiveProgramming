@@ -14,20 +14,17 @@ using vi = vector<int>;
 using pii = pair<int, int>;
 
 int main() { _
-    freopen("mixmilk.in", "r", stdin);
-    freopen("mixmilk.out", "w", stdout);
-    vector<pii> itens(3);
-    for (int i = 0;i < 3;++i)
-        cin >> itens[i].f >> itens[i].s;
-    int t = 100, i = 0;
-    while (t--) {
-        int b1 = (i % 3), b2 = (i + 1) % 3;
-        int cp = min(itens[b1].s, itens[b2].f - itens[b2].s);
-        itens[b1].s -= cp;
-        itens[b2].s += cp;
-        ++i;
+    freopen("shell.in", "r", stdin);
+    freopen("shell.out", "w", stdout);
+    int n, ans {}; cin >> n;
+    vi freq(3, 0), balls(3, 0);
+    iota(all(balls), 0);
+    for (int i = 0;i < n;++i) {
+        int x, y, z; cin >> x >> y >> z;
+        swap(balls[x-1], balls[y-1]);
+        ++freq[balls[z-1]];
+        ans = max(ans, freq[balls[z-1]]);
     }
-    for (auto [i, j] : itens)
-        cout << j << '\n';
+    cout << ans << '\n';
     return 0;
 }
