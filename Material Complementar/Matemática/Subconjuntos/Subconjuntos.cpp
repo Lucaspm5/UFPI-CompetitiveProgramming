@@ -17,10 +17,10 @@ int main() {
     vi x {1, 2, 3};
     // i = 0, conjunto vazio
     // 1 << n, congruente a 2^n
-    // 1 << n, numero de conjuntos que podem ser formados em n elementos
+    // 1 << n, numero de conjuntos que podem ser formados com n elementos
     for (int i = 0;i < (1 << 3);++i) {
         for (int j = 0;j < 3;++j) {
-            // verifica se o bit os j-th bit estão ligados ou não, caso ligagos imprimi o j-th elemento
+            // verifica se o bit j-th bit está ligado, caso ligado imprimi o j-th elemento
             if (i & (1 << j))
                 cout << x[j] << ", ";
         }
