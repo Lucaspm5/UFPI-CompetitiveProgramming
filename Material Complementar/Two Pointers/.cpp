@@ -43,7 +43,21 @@ int main() { _
             sum -= x[l++];
         }
     }
-    cout << ans << '\n';
+    /*
+        Alternativa semelhante (Preffix sum)
+        K é o valor a ser encontrado
+        map<int, int> memo;
+        ++memo[0];
+        int ans = 0, sum = 0;
+        for (int i = 0;i < n;++i) {
+            int x; cin >> x;
+            sum += x;
+            ans += memo[sum - k];
+            ++memo[sum];
+        }
+    */
+    cout << ( ans ) << '\n';
     return 0;
 }
+
 
