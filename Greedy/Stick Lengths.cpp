@@ -39,7 +39,6 @@ int main() { _
     int m = 0;
     if (~n & 1) {
         m = x[(n - 1) / 2] + (x[n / 2]  - x[(n - 1)/ 2]) / 2;
-        dbg(m);
     } else m = x[(n - 1) / 2];
     ll ans = 0;
     _for(i, x) ans += abs(i - m);
