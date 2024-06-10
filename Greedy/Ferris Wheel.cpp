@@ -1,4 +1,4 @@
-//https://cses.fi/problemset/result/9506780/
+https://cses.fi/problemset/task/1090/
 #define LOCAL
 #include <bits/stdc++.h>
 using namespace std;
@@ -39,11 +39,7 @@ int main() { _
     sort(all(x));
     int l = 0, r = n - 1, ans = 0;
     while(l <= r) {
-        if (x[l] + x[r] <= k) {
-            ++ans;
-            ++l, --r;
-            continue;
-        }
+        l += (x[l] + x[r] <= k);
         --r;
         ++ans;
     }
