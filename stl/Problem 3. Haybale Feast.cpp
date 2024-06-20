@@ -57,3 +57,25 @@ int main() { _
     cout << ans << '\n';
     return 0;   
 }
+/*
+    Outra solução:
+    int main() { _
+    freopen("hayfeast.in", "r", stdin);
+    freopen("hayfeast.out", "w", stdout);
+    cin >> n >> m;
+    v(p(int, int)) x(n); FOR(i, 0, n) cin >> x[i].f >> x[i].s;
+    ll sum = 0, ans = (ll)1e18, left = 0;
+    multiset<int> mt;
+    FOR(i, 0, n) {
+        sum += x[i].f;
+        mt.insert(x[i].s);
+        if (sum >= m) ans = min(ans, 1LL * *mt.rbegin());
+        while(sum >= m) {
+            mt.erase(mt.find(x[left].s));
+            sum -= x[left++].f;
+        }
+    } 
+    cout << ans << '\n';
+    return 0;   
+}
+*/
