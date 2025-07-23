@@ -11,9 +11,13 @@ struct BinaryTree {
 	unordered_map<uint, pair<T, uint>> tree;
 
 	void insertion(T x) {
+		if (tree.empty()) {
+			tree[1] = {x, 0};
+			return;
+		}
 		uint p = 1;
 		while (tree.count(p)) {
-			int partial = p;
+			uint partial = p;
 			partial <<= 1;
 			if (tree[p].first <= x) partial++;
 			p = partial;
@@ -49,13 +53,17 @@ struct BinaryTree {
 };
 
 int main() { _
-	int n, x; cin >> n >> x;
-	BinaryTree<int> bt;
-	bt.tree[1] = {x, 0};
-	for (int i = 0;i < n - 1;++i) {
-		cin >> x;
-		bt.insertion(x);
-	}
-	bt.path();
+	int n; cin >> n;
+	auto solve = [&n]() {
+		if (n == 0) return;
+		BinaryTree<int> bt;
+		for (int i = 0, x;i < n;++i) {
+			cin >> x;
+			bt.insertion(x);
+		}
+		bt.path();
+		
+	};
+	solve();
 	return 0;
 }
